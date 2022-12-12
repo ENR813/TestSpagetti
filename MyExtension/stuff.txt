@@ -1,0 +1,6 @@
+"content_scripts": [
+    {
+      "matches": ["https://*/*","http://*/*", "https://*/*.pdf","http://*/*.pdf"],
+      "js": ["content.js"]
+    }
+  ]

@@ -1,0 +1,27 @@
+{
+"manifest_version": 3,
+"name": "My Extension",
+"version": "1.0",
+"permissions": [
+  "webRequest",
+  "activeTab",
+  "scripting",
+  "tabs",
+  "nativeMessaging"
+],
+"content_scripts": [
+    {
+      "matches": ["https://*/*","http://*/*", "https://*/*.pdf","http://*/*.pdf"],
+      "js": ["content.js"]
+    }
+  ],
+  "commands": {
+    "inject-script": {
+      "suggested_key": "Ctrl+Y",
+      "description": "Inject a script on the page"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
